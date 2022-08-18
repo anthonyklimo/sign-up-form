@@ -1,0 +1,115 @@
+html {
+    --color-forest-green:#9cc49d; 
+    --color-text:rgba(0, 0, 0, 0.659);
+    --color-background:rgba(163, 138, 111, 0.344);
+}
+
+body {
+    display: flex;
+    margin: 0;
+    background-color: var(--color-background);
+}
+
+img {
+    max-width: 40vw;
+    min-height: 100vh;
+
+}
+
+form {
+    background-color: var(--color-forest-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 40px;
+    min-width: fit-content;
+    min-height: 40vh;
+
+    box-shadow: 0px 5px 5px grey;
+}
+
+label {
+    font-size: .7em;
+    color: rgba(0, 0, 0, 0.659);
+}
+
+input {
+    font-size: 20px;
+    appearance: none;
+    background-color: rgb(254, 248, 240);
+
+    width: clamp(5vw, 300px, 500px);
+    height: 1.4em;
+
+    border-radius: 5px;
+    border: 1px solid rgba(101, 101, 101, 0.62);
+}
+
+input:hover, input:focus {
+    background-color: rgb(254, 248, 240, .80);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 1px 1px 2px grey;
+}
+
+
+.names, .contact, .password {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-left: 40px;
+
+}
+
+.info {
+    min-height: 25vw;
+    text-align: bottom;
+    padding: 20px;
+    min-height: 25vh;
+    font-size: 2em;
+}
+
+
+.submit {
+    margin: 30px 80px;
+    font-size: 1.3em;
+}
+
+a, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: #05bb0c;
+    font-weight: bold;
+
+}
+
+button {
+    background-color: var(--color-forest-green);
+    color: var(--color-text);
+
+    font-size: 1.2em;
+    height: 2em;
+    width: fit-content; 
+
+    padding: 0px 20px;
+
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px grey;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #8cb48e;
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
