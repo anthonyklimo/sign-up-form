@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <img src="images/forest.jpeg" alt="forest">
 
@@ -19,54 +21,51 @@
             </p>
             <p>You know you want to.</p>
         </div>
-        <div class="form">
-            <form action="example.com" method="GET">
-                <div class="names">
-                    <div>
-                        <ul>
-                            <li><label for="firstName">FIRST NAME</label></li>
-                            <li><input type="text" id="firstName"></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><label for="lastName">LAST NAME</label></li>
-                            <li><input type="text" id="lastName"></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div>
-                        <ul>
-                            <li><label for="email">EMAIL</label></li>
-                            <li><input type="email" id="email"></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><label for="phone">PHONE</label></li>
-                            <li><input type="tel" id="phone"></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="password">
-                    <div>
-                        <ul>
-                            <li><label for="password">PASSWORD</label></li>
-                            <li><input type="text" id="password"></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><label for="confirmPassword">CONFIRM PASSWORD</label></li>
-                            <li><input type="text" id="confirmPassword"></li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
-        </div>
+        <form action="#" method="GET" id="myForm">
+            <div class="names">
+                <ul>
+                    <li><label for="firstName">FIRST NAME</label></li>
+                    <li><input type="text" id="firstName" required></li>
+                    <li class="error" id="errorFirstName">error</li>
+                </ul>
+                <ul>
+                    <li><label for="lastName">LAST NAME</label></li>
+                    <li><input type="text" id="lastName" required></li>
+                    <li class="error" id="errorLastName">error</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li><label for="email">EMAIL</label></li>
+                    <li><input type="email" id="email" 
+                               required></li>
+                    <li class="error" id="errorEmail">error</li>
+                </ul>
+                <ul>
+                    <li><label for="phone">PHONE</label></li>
+                    <li><input type="tel" id="phone" 
+                               pattern="(\d{10})"
+                               title="Please enter a 10 digit phone
+                               number - digits only."
+                               required></li>
+                    <li class="error" id="errorPhone">error</li>
+                </ul>
+            </div>
+            <div class="password">
+                <ul>
+                    <li><label for="password">PASSWORD</label></li>
+                    <li><input type="password" id="password" required></li>
+                    <li class="error" id="errorPassword">error</li>
+                </ul>
+                <ul>
+                    <li><label for="passwordConfirm">CONFIRM PASSWORD</label></li>
+                    <li><input type="password" id="passwordConfirm" required></li>
+                    <li class="error" id="errorPasswordConfirm">Passwords do not match.</li>
+                </ul>
+            </div>
+        </form>
         <div class="submit">
-            <button type="submit">Create Account</button>
+            <button type="submit" form="myForm" id="button">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </div>
     </div>
